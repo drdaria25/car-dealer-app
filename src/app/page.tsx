@@ -28,8 +28,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="h-fit w-1/2 text-white flex flex-col items-center p-8 ">
-      <div className="h-fit w-1/2 text-white flex flex-col items-center p-8 space-y-10 bg-gray-800 bg-opacity-50 rounded-xl">
+    <div className="h-fit w-full lg:w-1/2 text-white flex flex-col items-center p-8 ">
+      <div className="h-fit  text-white flex flex-col items-center p-8 space-y-10 bg-gray-800 bg-opacity-50 rounded-xl">
         <h1 className="text-4xl font-extrabold text-yellow-400 tracking-wide">
           🚗 Car Dealer App
         </h1>
