@@ -15,7 +15,7 @@ export default async function ResultPage({ params }: PageProps) {
   return (
     <Suspense
       fallback={
-        <div className="flex items-center justify-center h-screen">
+        <div className="flex items-center justify-center h-screen bg-gradient-to-b from-gray-800 to-gray-900 text-white">
           <Spinner />
         </div>
       }

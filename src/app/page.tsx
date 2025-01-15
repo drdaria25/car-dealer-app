@@ -14,8 +14,14 @@ export default function Home() {
 
   useEffect(() => {
     const loadMakes = async () => {
-      const fetchedMakes = await fetchMakes();
-      setMakes(fetchedMakes);
+      const cachedMakes = localStorage.getItem('makes');
+      if (cachedMakes) {
+        setMakes(JSON.parse(cachedMakes));
+      } else {
+        const fetchedMakes = await fetchMakes();
+        setMakes(fetchedMakes);
+        localStorage.setItem('makes', JSON.stringify(fetchedMakes));
+      }
     };
 
     loadMakes();

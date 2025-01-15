@@ -20,6 +20,7 @@ export default [
         console: 'readonly',
         process: 'readonly',
         fetch: 'readonly',
+        localStorage: 'readonly',
       },
     },
     plugins: {
