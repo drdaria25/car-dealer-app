@@ -16,7 +16,9 @@ export default function Models({ models }: ModelsProps) {
               className="p-4 bg-gray-800 text-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
             >
               <h2 className="text-lg font-medium">{model.Model_Name}</h2>
-              <p className="text-sm text-gray-400">Model ID: {model.Model_ID}</p>
+              <p className="text-sm text-gray-400">
+                Model ID: {model.Model_ID}
+              </p>
             </li>
           ))}
         </ul>

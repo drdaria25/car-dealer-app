@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 import { NavigationButtonProps } from '@/types/types';
 
 export default function NavigationButton({
@@ -8,11 +8,11 @@ export default function NavigationButton({
 }: NavigationButtonProps) {
   return (
     <Link
-      href={isDisabled ? "#" : href}
+      href={isDisabled ? '#' : href}
       className={`px-6 py-3 mb-10 text-lg font-bold uppercase tracking-wide rounded-lg shadow-md transition-transform transform ${
         isDisabled
-          ? "bg-gray-500 text-gray-300 cursor-not-allowed"
-          : "bg-yellow-400 text-gray-800 hover:bg-yellow-500 hover:scale-105"
+          ? 'bg-gray-500 text-gray-300 cursor-not-allowed'
+          : 'bg-yellow-400 text-gray-800 hover:bg-yellow-500 hover:scale-105'
       }`}
     >
       {label}

@@ -21,9 +21,8 @@ export interface VehicleMake {
   MakeName: string;
 }
 
-
 export interface NavigationButtonProps {
-  href: string;  
-  label: string;  
-  isDisabled?: boolean;  
+  href: string;
+  label: string;
+  isDisabled?: boolean;
 }

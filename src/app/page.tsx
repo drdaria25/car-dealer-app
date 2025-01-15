@@ -23,7 +23,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-800 to-gray-900 text-white flex flex-col items-center p-8 space-y-10">
-
       <h1 className="text-4xl font-extrabold text-yellow-400 tracking-wide">
         🚗 Car Dealer App
       </h1>
@@ -33,7 +32,10 @@ export default function Home() {
 
       <div className="bg-gray-700 p-6 rounded-lg shadow-lg w-full max-w-md space-y-6">
         <div>
-          <label htmlFor="makes" className="block text-sm font-medium text-gray-300 mb-2">
+          <label
+            htmlFor="makes"
+            className="block text-sm font-medium text-gray-300 mb-2"
+          >
             Select Vehicle Make
           </label>
           {makes.length > 0 ? (
@@ -58,7 +60,10 @@ export default function Home() {
         </div>
 
         <div>
-          <label htmlFor="years" className="block text-sm font-medium text-gray-300 mb-2">
+          <label
+            htmlFor="years"
+            className="block text-sm font-medium text-gray-300 mb-2"
+          >
             Select Model Year
           </label>
           {currentYear ? (
