@@ -15,17 +15,17 @@ export default async function ResultPage({ params }: PageProps) {
   return (
     <Suspense
       fallback={
-        <div className="flex items-center justify-center h-screen bg-gradient-to-b from-gray-800 to-gray-900 text-white">
+        <div className="flex items-center justify-center h-screen  text-white">
           <Spinner />
         </div>
       }
     >
-      <div className="min-h-screen bg-gradient-to-b from-gray-800 to-gray-900 text-white">
+      <div className="min-h-screen  text-white">
         <div className="container mx-auto p-8">
           <NavigationButton href="/" label="Back" isDisabled={false} />
-          <div className="bg-gray-700 p-6 rounded-lg shadow-lg mt-8">
+          <div className="bg-gray-700 bg-opacity-50 p-6 rounded-lg shadow-lg mt-8">
             <h1 className="text-3xl font-bold text-yellow-400 mb-4">
-              Vehicle Models
+              🚘 Vehicle Models
             </h1>
             <div className="p-4">
               <Models models={models} />
