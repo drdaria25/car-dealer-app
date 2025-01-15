@@ -7,7 +7,6 @@ import Spinner from '@/components/spinner';
 
 const Models = dynamic(() => import('@/components/models'));
 
-
 export default async function ResultPage({ params }: PageProps) {
   const { makeId, year } = await params;
 
