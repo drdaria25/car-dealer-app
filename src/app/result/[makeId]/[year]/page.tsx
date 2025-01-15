@@ -5,9 +5,8 @@ import dynamic from 'next/dynamic';
 import NavigationButton from '@/components/navigationButton';
 import Spinner from '@/components/spinner';
 
-const Models = dynamic(() => import('@/components/models'), {
-  suspense: true,
-});
+const Models = dynamic(() => import('@/components/models'));
+
 
 export default async function ResultPage({ params }: PageProps) {
   const { makeId, year } = await params;
