@@ -23,7 +23,7 @@ export default function Home() {
         localStorage.setItem('makes', JSON.stringify(fetchedMakes));
       }
     };
-  
+
     loadMakes();
   }, []);
 
