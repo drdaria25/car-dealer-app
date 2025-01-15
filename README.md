@@ -41,7 +41,7 @@ Ensure you have the following installed:
 ## Installation
 
 1. Clone the repository:  
-   `git clone https://github.com/your-username/car-dealer-app.git`  
+   `git clone https://github.com/drdaria25/car-dealer-app.git`  
    `cd car-dealer-app`
 
 2. Install dependencies:  
