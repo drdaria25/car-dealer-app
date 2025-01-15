@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <div className="fixed z-[-2] inset-0 max-w-screen   from-gray-800 max-h-screen  w-screen h-screen bg-cover bg-[url('/img/bg.jpg')]" />
+        <div className="fixed z-[-2] inset-0 max-w-screen max-h-screen  w-screen h-screen bg-cover bg-[url('/img/bg.jpg')]" />
       </body>
     </html>
   );
