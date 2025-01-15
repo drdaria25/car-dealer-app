@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Car Dealer App
 
-## Getting Started
+The Car Dealer App is a simple web application built using Next.js. It allows users to browse vehicle makes and models, filter them by year, and view the results on a dedicated results page.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Vehicle Filtering
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Filter vehicle makes by type and model year.
+- View filtered results on a separate page.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Dynamic Routing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Dynamically generated pages for results based on selected make and year.
 
-## Learn More
+### Responsive Design
 
-To learn more about Next.js, take a look at the following resources:
+- Styled using Tailwind CSS to ensure a responsive and modern user interface.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Improved Performance
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Utilizes Next.js features such as server-side rendering (SSR) and static site generation (SSG) for fast page loads.
 
-## Deploy on Vercel
+## Architecture
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Frontend Framework**: Next.js  
+  Utilizes the App Router for server-side rendering (SSR) and static site generation (SSG).
+- **Styling**: Tailwind CSS  
+  Ensures responsive and clean design.
+- **APIs**: Fetches data from the VPIC API.
+- **TypeScript**: Ensures type safety and improved developer experience.
+- **Linting and Formatting**: ESLint and Prettier integrated for code quality and consistency.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js (v16.8.0 or higher)
+- npm (v7 or higher)
+
+## Installation
+
+1. Clone the repository:  
+   `git clone https://github.com/your-username/car-dealer-app.git`  
+   `cd car-dealer-app`
+
+2. Install dependencies:  
+   `npm install`
+
+## Running the Application
+
+1. Start the development server:  
+   `npm run dev`  
+   Open `http://localhost:3000` in your browser to view the app.
+
+2. Build the application for production:  
+   `npm run build`  
+   This will create an optimized production build in the `.next` directory.
+
+3. Start the production server:  
+   `npm start`
+
+## Linting and Formatting
+
+1. Run ESLint to check for issues:  
+   `npx eslint src/`
+
+2. Automatically fix linting issues:  
+   `npx eslint src/ --fix`
+
+3. Format code with Prettier:  
+   `npm run format`
+
+## Folder Structure
+
+car-dealer-app/
+├── public/                       # Static assets (e.g., favicon, images)
+├── src/
+│   ├── api/                      # API calls
+│   │   ├── fetchMakes.ts         # Function to fetch vehicle makes
+│   │   └── fetchModels.ts        # Function to fetch vehicle models
+│   ├── app/                      # Next.js App Router
+│   │   ├── layout.tsx            # Global layout
+│   │   ├── page.tsx              # Main page (vehicle filtering)
+│   │   └── result/               # Dynamic routes
+│   │       └── [makeId]/[year]/
+│   │           └── page.tsx      # Results page
+│   ├── components/               # Reusable UI components
+│   │   ├── ...                   # Components
+│   ├── types/                    # TypeScript types
+│   │   └── types.ts              # Shared types for the project
+│   ├── styles/                   # Global styles
+│       └── globals.css           # Base styles
+├── .env.local                    # Environment variables
+├── .eslintrc.js                  # ESLint configuration
+├── .prettierrc                   # Prettier configuration
+├── package.json                  # Project dependencies and scripts
+├── postcss.config.mjs            # PostCSS configuration
+├── README.md                     # Project documentation
+├── tailwind.config.ts            # Tailwind CSS configuration
+└── tsconfig.json                 # TypeScript configuration
